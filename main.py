@@ -28,6 +28,7 @@ def edit_passport():
         with open(file_name, 'wb') as f:
             shutil.copyfileobj(res.raw, f)
         # print('Image sucessfully Downloaded: ', file_name)
+        f.close()
     else:
         return ('Image Couldn\'t be retrieved')
 
